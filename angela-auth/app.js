@@ -3,24 +3,20 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-// var encrypt = require("mongoose-encryption");
+var encrypt = require("mongoose-encryption");
 
 const app = express();
 
 mongoose.connect("mongodb://localhost:27017/userDB");
 
-// const userSchema = new mongoose.Schema({
-//   email: String,
-//   password: String,
-// });
-const userSchema = {
+const userSchema = new mongoose.Schema({
   email: String,
   password: String,
-};
+});
 
-// const secret = "ThisisourSecret";
+const secret = "ThisisourSecret";
 
-// userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
+userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
 
 const User = mongoose.model("User", userSchema);
 
