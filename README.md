@@ -29,6 +29,18 @@ This is the practices based on the Udemy courses of `The Complete Web Developmen
     - bcrypt
     - salt rounds
 
+## cookies and sessions
+
+    - npm install
+        - passport
+            - https://zhuanlan.zhihu.com/p/35877677
+            - https://github.com/jwalton/passport-api-docs
+        - passport-local
+        - passport-local-mongoose
+        - express-session
+            - https://www.cnblogs.com/loaderman/p/11506682.html
+    - chekc
+
 ## Resources
 
 https://github.com/londonappbrewery/Authentication-Secrets
